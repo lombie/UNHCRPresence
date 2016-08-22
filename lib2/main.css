@@ -1,0 +1,102 @@
+ 
+#header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    z-index: 15;
+    background:#08519c;
+}
+
+#title {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight:Bold;
+    color:white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 5px 0px 0px 10px;
+    float: left;
+    /*text-transform: uppercase;*/
+}
+        
+#map { 
+    position:absolute;
+    top:0; 
+    bottom:0; 
+    right: 0;
+    left: 0;
+    width:100%;
+    font-family: 'Open Sans', sans-serif;
+} 
+
+    
+path {
+    fill-opacity: .45;
+    stroke: #fff;
+    stroke-opacity: .1;    
+    stroke-width: 0.5px;
+}
+
+path:hover {
+    fill-opacity: .7;
+} 
+   
+#tt { 
+    pointer-events: none;
+    color:white;
+}
+
+#tipContainer {  
+    font-size:16px;
+    position:absolute;
+    width:180px;
+    z-index:100;
+    background-repeat:no-repeat;
+    text-align:left;
+    line-height:20px;
+}
+
+#tipLocation {
+    font-weight:normal;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color:white;
+    margin:0px;
+    padding:10px 10px;
+    background:#08519c;
+    font-size:14px;
+}
+
+#tipCount {
+    font-weight:bold;
+    font-size:32px;
+    letter-spacing:-1px;
+    margin:0px;
+    padding:0px 10px 10px 10px;
+    color:#08519c;
+}
+
+#tipKey {
+    font-weight:normal;
+    font-family: 'Open Sans', sans-serif;
+    font-size:10px;
+    color:#333;
+    margin:0px;
+    padding:5px 0px 5px 10px;
+    background:rgba(218,218,218,0.5);
+}
+
+.info {
+    font-weight:normal;
+    font-family: 'Open Sans', sans-serif;
+    font-size:10px;
+    color:#333;
+    margin:0px;
+    padding:5px 0px 5px 10px;
+    background:rgba(218,218,218,0.5);
+}
+
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}        
