@@ -1,0 +1,69 @@
+ // Add a legend
+        // Create the legend variable and set its position
+        var densityLegend = L.control({position: "topleft"});
+        // Define what happens when the legend gets loaded
+ 
+            // Create a div to store our legend in
+        densityLegend.onAdd = function (map) {var div = L.DomUtil.create("div", "info legend"); return div;}
+            // Create an array with the different intervals to be
+            // displayed in the legend
+ 
+        // Add empty legend to map
+        densityLegend.addTo(map);
+ 
+            var grades = [0,50,100,150,200,250,300];
+            // Create an array called 'labels' and set the first 2 lines
+        var labels = ["<strong>Population density<br>[Inhabitants/Km²]</strong>"];
+            // For each element in the array 'grades' create a new line in the
+            // legend.
+            for (var i = 0; i < grades.length; i++){
+                // set the from value. This gets the number stored in the
+                // array 'grades' at position i
+                var from = grades [i];
+                // set the to value. This gets the number in the array
+                // 'grades' at position i+1. Additionally 1 is subtracted
+                // so that the legend says: "from 0 to 49" and not from "0 to 50"
+                var to = grades [i+1]-1;
+                // Create the text for each line
+                labels.push("<i style='background:" + getColour(from + 1) + "'></i> " + from + (to ? "–" + to : "+"));
+            }
+ 
+        // Join all the labels in the labels-array and add a <br> after each element
+        var legendText = labels.join("<br>");
+         
+        // Use D3.js to fill up the legend DIV with our legend items
+        d3.select(".legend.leaflet-control") // select the div with class '.legend.leaflet-control'
+            .html(legendText); // Add the html stored in the legendText variable.
+
+
+        .defer(d3.json, "1990.json") // Load density1990.json
+        .defer(d3.json, "2000.json") // Load density2000.json
+
+        var density1990 = L.geoJson(density1990.features,{
+            style: densityStyle,
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(feature.properties.name + ": " + feature.properties.density+" Inh./Km²");
+            }
+        });
+ 
+        var density2000 = L.geoJson(density2000.features, {
+            style: densityStyle,
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(feature.properties.name +": "+ feature.properties.density+" Inh./Km²");
+            }
+        });
+
+                    
+
+// Define the layer controls:
+        // This means, that the  layers TotalPoC, density2000 and density1990 can be chosen to
+        // be displayed.
+        var control = L.control.layers(
+                {
+                     "Density in 2010" : TotalPoC
+,"Density in 2000" : density2000
+                    ,"Density in 1990" : density1990
+                }, null , {collapsed:true});
+ 
+        // Add the map controls to the map
+        control.addTo(map);
