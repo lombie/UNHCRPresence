@@ -1,9 +1,9 @@
  
     // Load the JSON file(s)
     queue()
-        .defer(d3.json, "lib/turkey.json") // Load TotalPoC.json
-		.defer(d3.json, "lib/NonSatelliteCities.json") // Load NonSatelliteCities.json
-		.defer(d3.json, "lib/SatelliteCities.json") // Load NonSatelliteCities.json
+        .defer(d3.json, "Lib/turkey.json") // Load TotalPoC.json
+		.defer(d3.json, "Lib/NonSatelliteCities.json") // Load NonSatelliteCities.json
+		.defer(d3.json, "Lib/SatelliteCities.json") // Load NonSatelliteCities.json
         .await(loadGeom); 
 		
     function loadGeom(error, TotalPoC, NonSatelliteCities, SatelliteCities){
@@ -75,7 +75,7 @@
         // Add the map controls to the map
         control.addTo(map);
 		
-		$.getJSON("lib/asam.geojson",function(data){
+		$.getJSON("Lib/asam.geojson",function(data){
             var asamIcon = L.icon({
                 iconUrl: 'images/asam.png',
                 iconSize: [20,50],
@@ -90,7 +90,7 @@
                 }).addTo(map);
             });
 			
-		$.getJSON("lib/hrdf.geojson",function(data){
+		$.getJSON("Lib/hrdf.geojson",function(data){
             var asamIcon = L.icon({
                 iconUrl: 'images/hrdf.png',
                 iconSize: [20,50],
@@ -105,7 +105,7 @@
                 }).addTo(map);
             });	
         
-        $.getJSON("lib/legalaid.geojson",function(data){
+        $.getJSON("Lib/legalaid.geojson",function(data){
             var asamIcon = L.icon({
                 iconUrl: 'images/ibc.png',
                 iconSize: [20,50],
@@ -120,7 +120,7 @@
                 }).addTo(map);
             });	
         
-        $.getJSON("lib/tihv.geojson",function(data){
+        $.getJSON("Lib/tihv.geojson",function(data){
             var asamIcon = L.icon({
                 iconUrl: 'images/stl.png',
                 iconSize: [20,50],
@@ -135,7 +135,7 @@
                 }).addTo(map);
             });	
         
-        $.getJSON("lib/kader.geojson",function(data){
+        $.getJSON("Lib/kader.geojson",function(data){
             var asamIcon = L.icon({
                 iconUrl: 'images/TRC.png',
                 iconSize: [20,50],
