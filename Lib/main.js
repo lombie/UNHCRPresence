@@ -122,7 +122,7 @@
         
         $.getJSON("Lib/tihv.geojson",function(data){
             var asamIcon = L.icon({
-                iconUrl: 'images/stl.png',
+                iconUrl: 'Images/stl.png',
                 iconSize: [20,50],
                 popupAnchor:  [0, -30],
                 });
