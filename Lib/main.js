@@ -78,7 +78,7 @@
 		$.getJSON("Lib/asam.geojson",function(data){
             var asamIcon = L.icon({
                 iconUrl: 'images/ASAM.png',
-                iconSize: [20,50],
+                iconSize: [20,20],
                 popupAnchor:  [0, -30],
                 });
             L.geoJson(data,{
