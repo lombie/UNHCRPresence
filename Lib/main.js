@@ -77,7 +77,7 @@
 		
 		$.getJSON("Lib/asam.geojson",function(data){
             var asamIcon = L.icon({
-                iconUrl: 'Images/asam.png',
+                iconUrl: 'images/asam.png',
                 iconSize: [20,50],
                 popupAnchor:  [0, -30],
                 });
@@ -92,7 +92,7 @@
 			
 		$.getJSON("Lib/hrdf.geojson",function(data){
             var asamIcon = L.icon({
-                iconUrl: 'Images/hrdf.png',
+                iconUrl: 'images/hrdf.png',
                 iconSize: [20,50],
                 popupAnchor:  [0, -30],
                 });
@@ -107,7 +107,7 @@
         
         $.getJSON("Lib/legalaid.geojson",function(data){
             var asamIcon = L.icon({
-                iconUrl: 'Images/ibc.png',
+                iconUrl: 'images/ibc.png',
                 iconSize: [20,50],
                 popupAnchor:  [0, -30],
                 });
@@ -122,7 +122,7 @@
         
         $.getJSON("Lib/tihv.geojson",function(data){
             var asamIcon = L.icon({
-                iconUrl: 'Images/stl.png',
+                iconUrl: 'images/stl.png',
                 iconSize: [20,50],
                 popupAnchor:  [0, -30],
                 });
@@ -137,7 +137,7 @@
         
         $.getJSON("Lib/kader.geojson",function(data){
             var asamIcon = L.icon({
-                iconUrl: 'Images/TRC.png',
+                iconUrl: 'images/TRC.png',
                 iconSize: [20,50],
                 popupAnchor:  [0, -30],
                 });
@@ -158,7 +158,7 @@
 		legend.onAdd = function (map) {
             
 			var div = L.DomUtil.create('div', 'info legend'),
-				labels = ['<strong> LEGEND</strong>', "<img src='Images/legend/asam.png' height=20>ASAM", "<img src='Images/legend/hrdf.png' height=20>HRDF (IKGV)", "<img src='Images/legend/ibc.png' height=20>Legal Aid", "<img src='Images/legend/stl.png' height=20>TIHV", "<img src='Images/legend/TRC.png' height=20>Kader/ KDD"],
+				labels = ['<strong> LEGEND</strong>', "<img src='images/legend/asam.png' height=20>ASAM", "<img src='images/legend/hrdf.png' height=20>HRDF (IKGV)", "<img src='images/legend/ibc.png' height=20>Legal Aid", "<img src='images/legend/stl.png' height=20>TIHV", "<img src='images/legend/TRC.png' height=20>Kader/ KDD"],
 				from, to;
 
 			div.innerHTML = labels.join('<br>');
