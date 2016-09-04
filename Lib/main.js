@@ -58,7 +58,7 @@
         // Define a basemap and min/max Zoom
         var map = L.map('map', {zoomControl:false, attributionControl: false } ).setView([39.364, 35.673], 6);
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibG9tYmllIiwiYSI6IlAyVlJfU3MifQ.gMTKJU_NsIvulLTttw4-XA', {
-			maxZoom: 12,
+			maxZoom: 12,    pitch: 60, 
             attribution: 'Map: <a href="http://www.unhcr.org.tr">UNHCR Turkey</a> Data: ',
 			id: 'lombie.nb901i12'
 		}).addTo(map);
